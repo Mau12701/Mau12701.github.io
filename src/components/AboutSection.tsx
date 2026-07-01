@@ -32,7 +32,7 @@ export default function AboutSection() {
             position: 'absolute',
             pointerEvents: 'none',
             fontFamily: 'monospace',
-            fontSize: 12,
+            fontSize: 11,
             letterSpacing: '0.1em',
             color: 'rgba(215,226,234,0.4)',
             border: '1px solid rgba(215,226,234,0.1)',

@@ -13,7 +13,22 @@ export default function AnimatedText({ text }: Props) {
   const chars = text.split('')
 
   return (
-    <p ref={ref} style={{ fontSize: 'clamp(1rem, 2vw, 1.35rem)', color: '#D7E2EA', fontWeight: 500, textAlign: 'center', lineHeight: 1.8, maxWidth: 580 }}>
+    <p
+      ref={ref}
+      style={{
+        fontSize: 'clamp(0.95rem, 1.6vw, 1.5rem)',
+        color: '#D7E2EA',
+        fontWeight: 520,
+        textAlign: 'center',
+        lineHeight: 1.7,
+        maxWidth: 620,
+        margin: '0 auto',
+        padding: '0 1rem',
+        display: 'flex',
+        flexWrap: 'wrap',
+        justifyContent: 'center',
+      }}
+    >
       {chars.map((char, i) => {
         const start = i / chars.length
         const end = start + 1 / chars.length

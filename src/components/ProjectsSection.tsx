@@ -1,27 +1,31 @@
 import FadeIn from './FadeIn'
 import LiveProjectButton from './LiveProjectButton'
 
+import redTopologia from '../assets/projects/Topologia.png'
+import redOspf from '../assets/projects/osfp.png'
+import redDhcp from '../assets/projects/dhcp.png'
+
 const projects = [
   {
     num: '01',
-    cat: 'Web · Python',
-    name: 'Proyecto',
-    href: '#',
-    imgs: ['screenshot 1', 'screenshot 2', 'pantalla principal'],
+    cat: 'Backend · Python · FastAPI',
+    name: 'Simulador de Planificadores de SO',
+    href: 'https://github.com/Mau12701/Planificadores_SistemasOperativos',
+    imgs: [null, null, null], // agrega aquí tus imágenes cuando las tengas
   },
   {
     num: '02',
-    cat: 'Redes · Cisco',
-    name: 'Topología de red empresarial',
-    href: '#',
-    imgs: ['diagrama red', 'config CLI', 'topología completa'],
+    cat: 'Redes · Cisco · OSPF · DHCP · ACL',
+    name: 'Red Empresarial Multisucursal',
+    href: 'https://github.com/Mau12701/Red-Empresarial-Multisucursal-Cisco-Packet-Tracer', // ajusta al nombre real de tu repo
+    imgs: [ redOspf, redDhcp, redTopologia],
   },
   {
     num: '03',
-    cat: 'Desktop · C# / Java',
-    name: 'Aplicación de escritorio',
-    href: '#',
-    imgs: ['UI vista 1', 'UI vista 2', 'pantalla principal'],
+    cat: 'UX · Mockup',
+    name: 'Mockup Hospital IMSS',
+    href: 'https://github.com/Mau12701/Trabajo_de_ihc_hospital_imss_mockup',
+    imgs: [null, null, null],
   },
 ]
 
@@ -85,37 +89,43 @@ export default function ProjectsSection() {
                   <div style={{ fontWeight: 900, color: 'rgba(215,226,234,0.15)', fontSize: 'clamp(3rem, 8vw, 7rem)', lineHeight: 1 }}>
                     {p.num}
                   </div>
-                  <LiveProjectButton href={p.href} />
+                  <LiveProjectButton label="Ver en GitHub" href={p.href} />
                 </div>
               </div>
 
               {/* imágenes */}
               <div style={{ display: 'grid', gridTemplateColumns: '40% 60%', gap: '1rem', height: 300 }}>
                 <div style={{ display: 'flex', flexDirection: 'column', gap: '1rem' }}>
-                  {[p.imgs[0], p.imgs[1]].map((label, j) => (
+                  {[p.imgs[0], p.imgs[1]].map((img, j) => (
                     <div key={j} style={{
-                      flex: 1, borderRadius: 20,
+                      flex: 1, borderRadius: 20, overflow: 'hidden',
                       background: 'rgba(215,226,234,0.04)',
                       border: '1px solid rgba(215,226,234,0.08)',
                       display: 'flex', alignItems: 'center', justifyContent: 'center',
-                      fontFamily: 'monospace', fontSize: 11,
-                      color: 'rgba(215,226,234,0.2)', letterSpacing: '0.08em',
-                      textTransform: 'uppercase',
                     }}>
-                      {label}
+                      {img ? (
+                        <img src={img} alt={p.name} style={{ width: '100%', height: '100%', objectFit: 'cover' }} />
+                      ) : (
+                        <span style={{ fontFamily: 'monospace', fontSize: 11, color: 'rgba(215,226,234,0.2)', letterSpacing: '0.08em', textTransform: 'uppercase' }}>
+                          imagen pendiente
+                        </span>
+                      )}
                     </div>
                   ))}
                 </div>
                 <div style={{
-                  borderRadius: 20, height: '100%',
+                  borderRadius: 20, height: '100%', overflow: 'hidden',
                   background: 'rgba(215,226,234,0.04)',
                   border: '1px solid rgba(215,226,234,0.08)',
                   display: 'flex', alignItems: 'center', justifyContent: 'center',
-                  fontFamily: 'monospace', fontSize: 11,
-                  color: 'rgba(215,226,234,0.2)', letterSpacing: '0.08em',
-                  textTransform: 'uppercase',
                 }}>
-                  {p.imgs[2]}
+                  {p.imgs[2] ? (
+                    <img src={p.imgs[2]} alt={p.name} style={{ width: '100%', height: '100%', objectFit: 'cover' }} />
+                  ) : (
+                    <span style={{ fontFamily: 'monospace', fontSize: 11, color: 'rgba(215,226,234,0.2)', letterSpacing: '0.08em', textTransform: 'uppercase' }}>
+                      imagen pendiente
+                    </span>
+                  )}
                 </div>
               </div>
 
