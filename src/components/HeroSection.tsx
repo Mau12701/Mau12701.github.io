@@ -95,7 +95,7 @@ export default function HeroSection() {
           animate={{ opacity: 1, y: 0 }}
           transition={{ duration: 0.7, delay: 0.35 }}
         >
-          Construyo cosas<br />que funcionan.
+          Construyo cosas<br />por que me apasiona.
         </motion.p>
 
         <motion.div

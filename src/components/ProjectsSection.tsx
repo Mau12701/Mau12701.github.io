@@ -5,24 +5,55 @@ import redTopologia from '../assets/projects/Topologia.png'
 import redOspf from '../assets/projects/osfp.png'
 import redDhcp from '../assets/projects/dhcp.png'
 
+import dashboardRed from '../assets/projects/dashboard.png'
+import historialRed from  '../assets/projects/historial.png' 
+
+import detallesCatag  from  '../assets/projects/detalle.png'
+import detalleCatag2  from  '../assets/projects/detalle 2.png'
+import homeCat from  '../assets/projects/home.png'
+
+import historialweb from '../assets/projects/historialsitiosweb.png'
+import dashboardWeb from '../assets/projects/dashboardsitiosweb.png'
+
 const projects = [
   {
     num: '01',
-    cat: 'Backend · Python · FastAPI',
-    name: 'Simulador de Planificadores de SO',
-    href: 'https://github.com/Mau12701/Planificadores_SistemasOperativos',
-    imgs: [null, null, null], // agrega aquí tus imágenes cuando las tengas
+    cat: 'Redes · Cisco · OSPF · DHCP · ACL',
+    name: 'Red Empresarial Multisucursal',
+    href: 'https://github.com/Mau12701/Red-Empresarial-Multisucursal-Cisco-Packet-Tracer',
+    imgs: [redOspf, redDhcp, redTopologia],
   },
   {
     num: '02',
-    cat: 'Redes · Cisco · OSPF · DHCP · ACL',
-    name: 'Red Empresarial Multisucursal',
-    href: 'https://github.com/Mau12701/Red-Empresarial-Multisucursal-Cisco-Packet-Tracer', // ajusta al nombre real de tu repo
-    imgs: [ redOspf, redDhcp, redTopologia],
+    cat: 'Backend · Python · FastAPI · SQLite',
+    name: 'Monitor de Red Local',
+    href: 'https://github.com/Mau12701/monitor-red-local',
+    imgs: [null, historialRed, dashboardRed],
   },
   {
     num: '03',
-    cat: 'UX · Mockup',
+    cat: 'Backend · Python · FastAPI · HTTPx',
+    name: 'Monitor de Sitios Web',
+    href: 'https://github.com/Mau12701/monitor-sitios-web',
+    imgs: [null, historialweb, dashboardWeb],
+  },
+  {
+    num: '04',
+    cat: 'React · TypeScript · Tailwind · API REST',
+    name: 'Catálogo de Videojuegos',
+    href: 'https://github.com/Mau12701/catalogo-videojuegos',
+    imgs: [detalleCatag2, detallesCatag, homeCat],
+  },
+  {
+    num: '05',
+    cat: 'Backend · Python · FastAPI',
+    name: 'Simulador de Planificadores de SO',
+    href: 'https://github.com/Mau12701/Planificadores_SistemasOperativos',
+    imgs: [null, null, null],
+  },
+  {
+    num: '06',
+    cat: 'UX · Mockup · Diseño Móvil',
     name: 'Mockup Hospital IMSS',
     href: 'https://github.com/Mau12701/Trabajo_de_ihc_hospital_imss_mockup',
     imgs: [null, null, null],
