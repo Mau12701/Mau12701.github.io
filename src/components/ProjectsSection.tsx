@@ -22,6 +22,7 @@ const projects = [
     name: 'Red Empresarial Multisucursal',
     href: 'https://github.com/Mau12701/Red-Empresarial-Multisucursal-Cisco-Packet-Tracer',
     imgs: [redOspf, redDhcp, redTopologia],
+    contain: true,
   },
   {
     num: '02',
@@ -29,6 +30,7 @@ const projects = [
     name: 'Monitor de Red Local',
     href: 'https://github.com/Mau12701/monitor-red-local',
     imgs: [null, historialRed, dashboardRed],
+    contain: true,
   },
   {
     num: '03',
@@ -36,6 +38,7 @@ const projects = [
     name: 'Monitor de Sitios Web',
     href: 'https://github.com/Mau12701/monitor-sitios-web',
     imgs: [null, historialweb, dashboardWeb],
+    contain: true,
   },
   {
     num: '04',
@@ -43,6 +46,7 @@ const projects = [
     name: 'Catálogo de Videojuegos',
     href: 'https://github.com/Mau12701/catalogo-videojuegos',
     imgs: [detalleCatag2, detallesCatag, homeCat],
+    contain: true,
   },
   {
     num: '05',
@@ -50,6 +54,7 @@ const projects = [
     name: 'Simulador de Planificadores de SO',
     href: 'https://github.com/Mau12701/Planificadores_SistemasOperativos',
     imgs: [null, null, null],
+    contain: true,
   },
   {
     num: '06',
@@ -57,6 +62,7 @@ const projects = [
     name: 'Mockup Hospital IMSS',
     href: 'https://github.com/Mau12701/Trabajo_de_ihc_hospital_imss_mockup',
     imgs: [null, null, null],
+    contain: true,
   },
 ]
 
