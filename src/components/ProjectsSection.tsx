@@ -130,41 +130,109 @@ export default function ProjectsSection() {
                 </div>
               </div>
 
-              {/* imágenes */}
-              <div style={{ display: 'grid', gridTemplateColumns: '40% 60%', gap: '1rem', height: 300 }}>
-                <div style={{ display: 'flex', flexDirection: 'column', gap: '1rem' }}>
-                  {[p.imgs[0], p.imgs[1]].map((img, j) => (
-                    <div key={j} style={{
-                      flex: 1, borderRadius: 20, overflow: 'hidden',
-                      background: 'rgba(215,226,234,0.04)',
-                      border: '1px solid rgba(215,226,234,0.08)',
-                      display: 'flex', alignItems: 'center', justifyContent: 'center',
-                    }}>
-                      {img ? (
-                        <img src={img} alt={p.name} style={{ width: '100%', height: '100%', objectFit: 'cover' }} />
-                      ) : (
-                        <span style={{ fontFamily: 'monospace', fontSize: 11, color: 'rgba(215,226,234,0.2)', letterSpacing: '0.08em', textTransform: 'uppercase' }}>
-                          imagen pendiente
-                        </span>
-                      )}
-                    </div>
-                  ))}
-                </div>
-                <div style={{
-                  borderRadius: 20, height: '100%', overflow: 'hidden',
-                  background: 'rgba(215,226,234,0.04)',
-                  border: '1px solid rgba(215,226,234,0.08)',
-                  display: 'flex', alignItems: 'center', justifyContent: 'center',
-                }}>
-                  {p.imgs[2] ? (
-                    <img src={p.imgs[2]} alt={p.name} style={{ width: '100%', height: '100%', objectFit: 'cover' }} />
-                  ) : (
-                    <span style={{ fontFamily: 'monospace', fontSize: 11, color: 'rgba(215,226,234,0.2)', letterSpacing: '0.08em', textTransform: 'uppercase' }}>
-                      imagen pendiente
-                    </span>
-                  )}
-                </div>
-              </div>
+ {/* imágenes */}
+<div
+  style={{
+    display: 'grid',
+    gridTemplateColumns: '40% 60%',
+    gap: '1rem',
+    alignItems: 'stretch',
+  }}
+>
+  {/* Columna izquierda */}
+  <div
+    style={{
+      display: 'grid',
+      gridTemplateRows: '1fr 1fr',
+      gap: '1rem',
+    }}
+  >
+    {[p.imgs[0], p.imgs[1]].map((img, j) => (
+      <div
+        key={j}
+        style={{
+          aspectRatio: '16 / 9',
+          borderRadius: 20,
+          overflow: 'hidden',
+          background: 'rgba(215,226,234,0.04)',
+          border: '1px solid rgba(215,226,234,0.08)',
+          display: 'flex',
+          justifyContent: 'center',
+          alignItems: 'center',
+        }}
+      >
+        {img ? (
+          <img
+            src={img}
+            alt={p.name}
+            style={{
+              width: '100%',
+              height: '100%',
+              objectFit: p.contain ? 'contain' : 'cover',
+              padding: p.contain ? '0.5rem' : 0,
+              display: 'block',
+            }}
+          />
+        ) : (
+          <span
+            style={{
+              fontFamily: 'monospace',
+              fontSize: 11,
+              color: 'rgba(215,226,234,0.2)',
+              letterSpacing: '0.08em',
+              textTransform: 'uppercase',
+            }}
+          >
+            imagen pendiente
+          </span>
+        )}
+      </div>
+    ))}
+  </div>
+
+  {/* Imagen grande */}
+  <div
+     style={{
+    display: 'flex',
+    justifyContent: 'center',
+    alignItems: 'center',
+
+    borderRadius: 20,
+    overflow: 'hidden',
+
+    background: 'rgba(215,226,234,0.04)',
+    border: '1px solid rgba(215,226,234,0.08)',
+
+    minHeight: '100%',
+  }}
+  >
+    {p.imgs[2] ? (
+      <img
+        src={p.imgs[2]}
+        alt={p.name}
+        style={{
+          width: '100%',
+          height: '100%',
+          objectFit: p.contain ? 'contain' : 'cover',
+          padding: p.contain ? '0.5rem' : 0,
+          display: 'block',
+        }}
+      />
+    ) : (
+      <span
+        style={{
+          fontFamily: 'monospace',
+          fontSize: 11,
+          color: 'rgba(215,226,234,0.2)',
+          letterSpacing: '0.08em',
+          textTransform: 'uppercase',
+        }}
+      >
+        imagen pendiente
+      </span>
+    )}
+  </div>
+</div>
 
             </div>
           </FadeIn>
